@@ -40,7 +40,7 @@ public class FirstGui {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 //new BaseWindow().setVisible(true);
-                new ConvertTemp().setVisible(true);
+                new ConvertTempWindow().setVisible(true);
             }
         });
     }
