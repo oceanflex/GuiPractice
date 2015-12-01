@@ -39,7 +39,8 @@ public class FirstGui {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BaseWindow().setVisible(true);
+                //new BaseWindow().setVisible(true);
+                new ConvertTemp().setVisible(true);
             }
         });
     }
