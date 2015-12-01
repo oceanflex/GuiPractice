@@ -31,6 +31,12 @@ public class ConvertTemp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        cTemp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cTempActionPerformed(evt);
+            }
+        });
+
         fTemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fTempActionPerformed(evt);
@@ -38,8 +44,18 @@ public class ConvertTemp extends javax.swing.JFrame {
         });
 
         fConvertTo.setText("to F");
+        fConvertTo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fConvertToActionPerformed(evt);
+            }
+        });
 
         cConvertTo.setText("to C");
+        cConvertTo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cConvertToActionPerformed(evt);
+            }
+        });
 
         fLabel.setText("°F");
 
@@ -87,8 +103,22 @@ public class ConvertTemp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fTempActionPerformed
-        
+        fConvertToActionPerformed(evt);
     }//GEN-LAST:event_fTempActionPerformed
+
+    private void cConvertToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cConvertToActionPerformed
+        String from = fTemp.getText();
+        double f = Double.parseDouble(from);
+    }//GEN-LAST:event_cConvertToActionPerformed
+
+    private void fConvertToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fConvertToActionPerformed
+        String from = cTemp.getText();
+        double c = Double.parseDouble(from);
+    }//GEN-LAST:event_fConvertToActionPerformed
+
+    private void cTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cTempActionPerformed
+        cConvertToActionPerformed(evt);
+    }//GEN-LAST:event_cTempActionPerformed
 
 //    /**
 //     * @param args the command line arguments

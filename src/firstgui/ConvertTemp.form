@@ -69,6 +69,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="cTemp">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cTempActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="fTemp">
       <Events>
@@ -79,11 +82,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="to F"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fConvertToActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="cConvertTo">
       <Properties>
         <Property name="text" type="java.lang.String" value="to C"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cConvertToActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="fLabel">
       <Properties>
