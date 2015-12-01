@@ -118,7 +118,7 @@ public class ConvertTempWindow extends javax.swing.JFrame {
     private void fConvertToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fConvertToActionPerformed
         String from = cTemp.getText();
         double c = Double.parseDouble(from);
-        double f = converter.fToC(c);
+        double f = converter.cToF(c);
         fTemp.setText(Double.toString(f));
     }//GEN-LAST:event_fConvertToActionPerformed
 
